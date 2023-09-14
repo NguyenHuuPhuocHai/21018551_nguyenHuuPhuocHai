@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuan 2 Bai 2</title>
+    
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0 auto;
+        }
+        #tong{
+            width: 850px;
+            height: 691px;
+            border: 1px solid;
+        }
+        header{
+            width: 100%;
+            height: 202px;
+            background-image: url("../images/background.png");
+            display: flex;
+            flex-direction: column;
+        }
+        #tieude{
+            display: flex;
+            justify-content: left;
+            margin-left: 0px;
+        }
+        #fonttieude{
+            display: flex;
+            margin-top: 50px;
+            color: white;
+        }
+        nav{
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            width: 100%;
+            height: 30px;
+            margin-left: 0px;
+            background-color: rgba(111, 111, 111, 0.629);
+        }
+        #sec0{
+            width: 75%;
+            height: 470px;
+            margin-left: 0px;
+            border-right: 1px groove;
+            background-color: white;
+            float: left;
+        }
+        #art1{
+            display: flex;
+            flex-direction: row;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+        #art2{
+            display: flex;
+            flex-direction: row;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+        aside{
+            width: 25%;
+            float: left;
+            height: 470px;
+            background-color: white;
+        }
+        #sec1{
+            width: 90%;
+            margin-left: 15px;
+            color: palevioletred;
+        }
+        #sec2{
+            width: 90%;
+            margin-left: 15px;
+            justify-content: left;
+        }
+        footer{
+            width: 100%;
+            height: auto;
+            text-align: left;
+            background-color: rgba(111, 111, 111, 0.312);
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div id="tong">
+        <header>
+            <div id="tieude">
+                <img src="../images/logo.png" alt="">
+                <div id="fonttieude">
+                    <p>
+                        <b style="font-size: 35px;">YOKO'S KITCHEN</b>
+                        <br>
+                        <b>JAPANESE COOKING CLASSES</b>
+                    </p>
+                </div>
+            </div>
+            <nav>
+                <div style="display: flex; justify-content: left; ;width: 50%; margin-left: 0px;">
+                   <p>home</p>
+                   <p style="color: black;">classes</p>
+                   <p style="color: white;">catering</p>
+                   <p style="color: white;">about</p>
+                   <p style="color: white;">contact</p>
+                </div>
+                
+            </nav>
+        </header>
+        <section id="sec0">
+            <article id="art1">
+                <div>
+                    <img src="../images/boichok.jpg" alt="" style="height: 188px;width: 288px;"><br>Bok Choi
+                </div>
+                <div>
+                    <br>
+                    <b style="font-size: 20px;margin-top: 10px;">Japanese Vegetarian</b>
+                    <br>
+                    <p style="color: palevioletred;">Five week course in London</p><br>
+                    <p>
+                        A five week introduction to traditional <br>
+                        Japanese vegetarian meals, teaching you a <br>
+                        selection of rice and noodle dishes.
+                    </p>
+                </div>
+            </article>
+            <br>
+            <article id="art2">
+                <div>
+                    <img src="../images/teriyaki.jpg" alt=""><br>Teriyaki Sauce
+                </div>
+                <div>
+                    <b style="font-size: 20px;margin-top: 10px;">Sauces Masterclass</b>
+                    <br>
+                    <p style="color: palevioletred;">One day workshop</p><br>
+                    <p>
+                        An intensive one-day course looking at how <br>
+                        to create the most delicious sauces for use in <br>
+                        a range of Japanese cookery.
+                    </p>
+                </div>
+            </article>
+        </section>
+        <aside>
+            <section id="sec1">
+                <div>
+                    <h2 style="text-align: left;margin-top: 30px;">Popular Recipies</h2>
+                    <br>
+                    <p style="border-bottom: 1px groove;">Yakitori (grilled chicken)</p>
+                    <br>
+                    <p style="border-bottom: 1px groove;">Tsukune (minced chicken patties)</p>
+                    <br>
+                    <p style="border-bottom: 1px groove;">Okonomiyaki (savory pancakes)</p>
+                    <br>
+                    <p style="border-bottom: 1px groove;">Mizutaki (chicken stew)</p>
+                </div>
+            </section>
+            <br>
+            <section id="sec2">
+                <div>
+                    <h2 style="text-align: left;margin-top: 10px; color: palevioletred;">Contact</h2>
+                    <br>
+                    <p>
+                        Yoko's Kitchen <br>
+                        27 Redchurch Street <br>
+                        Shoreditch <br>
+                        London E2 7DP
+                    </p>
+                </div>
+            </section>
+        </aside>
+        
+        <footer>
+            <div>
+                &#169; 2011 Yoko's Kitchen
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

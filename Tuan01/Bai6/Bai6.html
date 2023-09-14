@@ -1,0 +1,80 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 5px auto;
+        }
+
+        form{
+            width: 600px;
+            height: 650px;
+            background-color: rgb(0, 132, 255);
+            padding: 20px;
+        }
+
+        #tieude{
+            width: 250px;
+            height: 100px;
+            border: 1px solid black;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 5px 10px #71717150;
+            font-size: 30px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <div id="tieude">
+            <p>
+                Jackson
+                <hr>
+                Electronics
+            </p>
+        </div>
+        <br>
+        <p style="text-align: center;">Registration Form</p>
+        <br><br>
+        <p style="text-align: center;">Register your Jackson Electronics product here</p>
+        <div id="inputs1">
+            First Name: <input type="text"> Last Name: <input type="text">
+            <br>
+            Address #1: <input type="text" size="30">
+            <br>
+            Address #2: <input type="text" size="30">
+            <br>
+            City: <input type="text"> State: <input type="text" size="1"> Zip: <input type="text">
+            <br>
+            Country: <input type="text" name="" id="" placeholder="United States">
+        </div>
+        <hr>
+        <div id="inputs2">
+            Product: <select name="" id="">
+                <option value="1">ScanMaster</option>
+            </select>
+            <br>
+            Data Purchased: <input type="text">
+            <br>
+            Serial #: <input type="text">
+            <br>
+            Used for:           <input type="radio" name="" id="">Home      <input type="radio" name="" id="">Educational Institution
+                                <input type="radio" name="" id="">Business  <input type="radio" name="" id="">Other
+                                <input type="radio" name="" id="">Government
+            <br>
+            System (check all that apply): <input type="checkbox" name="" id="">Windows <input type="checkbox" name="" id="">UNIX <input type="checkbox" name="" id="">Macintosh <input type="checkbox" name="" id="">Other
+        </div>
+        <hr>
+        <div>
+            Comments: <input type="text">
+        </div>
+        <div style="text-align: center;">
+            <input type="button" value="Click to Register"> <input type="button" value="Click to cancel">
+        </div>
+    </form>
+</body>
+</html>
