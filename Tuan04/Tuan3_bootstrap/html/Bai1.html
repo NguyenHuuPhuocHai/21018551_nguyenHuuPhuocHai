@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <style>
+        .container{
+            background-color:  rgb(92, 217, 255);
+        }
+        .nav{
+            font-size: 20px;
+        }
+        input {
+            border: 1px solid blue;
+            border-radius: 7px;
+        }
+        #se{
+            border: 1px solid blue;
+            border-radius: 7px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row" style="border-bottom: 5px dotted white;">
+            <div class="col-9">
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link text-white font-weight-bold" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white font-weight-bold" href="#">Products</a></li>
+                    <li class="nav-item"><a class="nav-link text-white font-weight-bold" href="#">Services</a></li>
+                    <li class="nav-item"><a class="nav-link text-white font-weight-bold" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link text-white font-weight-bold" href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-3">
+                <h1 class="text-white" style="text-shadow: 1px 1px 2px black, 0px 0px 25px blue;">Sky World</h1>
+            </div>
+        </div>
+        <br>
+        <div class="row text-white" style="border-bottom: 5px dotted white;">
+            <div class="col-6">
+                <h3>Registration Information</h3>
+                <p>Start your travel planning now with our on-line tour regstration form. Just tell us a little about yourself and your group and one of our travel experts will contact you to create the perfect custom built for your group's needs .</p>
+                <table>
+                    <tr>
+                        <td>Title</td>
+                        <td><select name="se" id="se" class="form-control" style="width: 90px;">
+                            <option value="Mr.">Mr.</option>
+                            <option value="Mrs.">Mrs.</option>
+                        </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Full name *</td>
+                        <td><input type="text" name="ten" id="ten" placeholder="FirstName" style="color: gray; width:250px;"></td>
+                    </tr>
+                    <tr>
+                        <td>Mailing Address</td>
+                        <td><input type="email" name="email" id="email" style="width:250px;" ></td>
+                    </tr>
+                    <tr>
+                        <td>City</td>
+                        <td><input type="text" name="city" id="city" style="width:250px;"></td>
+                    </tr>
+                    <tr>
+                        <td>Country</td>
+                        <td><input type="text" name="Country" id="Country" style="width:250px;"></td>
+                    </tr>
+                    <tr>
+                        <td>Specific questions or requests about your tour</td>
+                        <td><textarea name="comment" id="comment" cols="30" rows="4" placeholder="Specific questions or requests about your tour" style="width:250px; border: 1px blue solid; border-radius: 7px;"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td rowspan="2">
+                            <input type="submit" value="Submit" style="border: 1px blue dashed;">
+                            <input type="reset" value="Reset" style="border: 1px blue dashed;">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-6">
+                <img src="../image/sky.png" alt="" style="width: 490px; height: 330px; margin-top: 30px;">
+                <br>
+                <p style="text-shadow: 5px 3px 2px blue; font-size: 45px; color: blue; font-weight: bold; margin-left: 30px; margin-top: 15px;">
+                    You've arrived.
+                </p>
+                <p style="color: blue; font-size: 20px; margin-left: 45px; font-weight: bold;">
+                    Journeys as great as the destinations.
+                </p>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-12 text-center">
+                <p>
+                    <b>&#169;2016 Sky World Tours. All rights reserved.</b>
+                </p>
+                <p>
+                    Contact information: <b><i>Student Name</i></b> | <b><i>StudentID</i></b> | Testing Date: <b><i>16 Sept 2016</i></b>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
