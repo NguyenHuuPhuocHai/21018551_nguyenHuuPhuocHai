@@ -1,0 +1,102 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0px auto;
+        }
+        .container{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="text-center">FORM ĐỊNH DẠNG</p>
+        <form action="/action_page.php" class="form-horizontal">
+            <div class="form-group row">
+                <label class="control-label col-sm-2" for="hoten">Họ và Tên</label>
+                <div class="col-sm-5">
+                    <input type="text" name="hoten" id="hoten" class="form-control">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="control-label col-sm-2" for="">Chọn:</label>
+                <div class="col-sm-5">
+                    <input type="radio" name="loai" value="Background" id="Background">Background
+                    <input type="radio" name="loai" value="Font" id="Background">Font
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="control-label col-sm-2" for="">Chọn màu:</label>
+                <div class="col-sm-5">
+                    <select name="" id="mau">
+                        <option value="do" id="do">Đỏ</option>
+                        <option value="vang" id="vang">Vàng</option>
+                        <option value="xanhla" id="xanhla">Xanh Lá</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row" style="margin-left: 500px;">
+                <button type="button" value="Doimau" id="Doimau" onclick="Change()">Đổi màu</button>
+                <button type="reset" value="Cancel" id="Cancel" onclick="reset()">Cancel</button>
+            </div>
+        </form>
+    </div>
+    <script lang="text/Javescript">
+        function Change(){
+            var loai = document.forms[0];
+            var i;
+            var mau = document.getElementById('mau').value;
+            var div = document.getElementsByClassName('container');
+            var txt = document.getElementById('hoten');
+            for(i = 0; i<loai.length; i++){
+                if(loai[i].checked == true){
+                    if(loai[i].value == "Background"){
+                        if(mau == "do"){
+                        for(i=0; i<div.length; i++){
+                            div[i].style.backgroundColor = "red";
+                        }
+                    }
+                    else if(mau == "vang"){
+                        for(i=0; i<div.length; i++){
+                            div[i].style.backgroundColor = "yellow";
+                        }
+                    }
+                    else if(mau == "xanhla"){
+                        for(i=0; i<div.length; i++){
+                            div[i].style.backgroundColor = "green";
+                        }
+                    }
+                    }
+                    else if(loai[i].value == "Font"){
+                        if(mau == "do"){
+                        txt.style.color = "red";
+                    }
+                    else if(mau == "vang"){
+                        txt.style.color = "yellow";
+                    }
+                    else if(mau == "xanhla"){
+                        txt.style.color = "green";
+                    }
+                    }
+                }
+                
+            }
+                
+        };
+
+        function reset(){
+            document.getElementById('hoten').reset();
+            document.getElementsByClassName('container').reset();
+        }
+
+    </script>
+</body>
+</html>

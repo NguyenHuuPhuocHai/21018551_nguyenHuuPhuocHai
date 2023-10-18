@@ -1,0 +1,94 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <script lang="Javescript">
+        function check(){
+            var a = document.getElementById("num1").value;
+            var b = document.getElementById("num2").value;
+
+            if (a == "" || b == "") {
+                alert("Vui long nhap vao hai so");
+                return false;
+            }
+
+            a = Number(a);
+            b = Number(b);
+
+            if (isNaN(a) || isNaN(b)) {
+                alert("Ban phai nhap so");
+                return false;
+            }
+        }
+        function tru() {
+            var a = document.getElementById("num1").value;
+            var b = document.getElementById("num2").value;
+            var sum = 0;
+            sum= parseInt(a) - parseInt(b);
+            document.getElementById("ketqua").value = sum;
+        }
+        function nhan() {
+            var a = document.getElementById("num1").value;
+            var b = document.getElementById("num2").value;
+            var sum = 0;
+            sum= parseInt(a) * parseInt(b);
+            document.getElementById("ketqua").value = sum;
+        }
+        function chia() {
+            var a = document.getElementById("num1").value;
+            var b = document.getElementById("num2").value;
+            var sum = 0;
+            if(b==0){
+                alert("khong the chia 0");
+            }else{
+                sum= parseInt(a) / parseInt(b);
+                document.getElementById("ketqua").value = sum;
+            }
+        }
+        function cong() {
+            var a = document.getElementById("num1").value;
+            var b = document.getElementById("num2").value;
+            var sum = 0;
+            sum= parseInt(a) + parseInt(b);
+            document.getElementById("ketqua").value = sum;
+        }
+    </script>
+
+    <div class="container">
+        <form action="" class="form-horizontal">
+            <p class="text-center">Phep Tinh Co Ban</p>
+            <br>
+            <div class="form-group">
+                <Label class="control-label col-sm-2" for="num1">Nhap so thu 1</Label>
+                <div class="col-sm-5">
+                    <input type="text" name="num1" id="num1" class="form-control">
+                </div>
+                <Label class="control-label col-sm-2" for="num2">Nhap so thu 2</Label>
+                <div class="col-sm-5">
+                    <input type="text" name="num2" id="num2" class="form-control">
+                </div>
+                <div>
+                    <button type="button" class="btn btn-default" onclick="cong()">Cong</button>
+                    <button type="button" class="btn btn-default" onclick="tru()">Tru</button>
+                    <button type="button" class="btn btn-default" onclick="nhan()">Nhan</button>
+                    <button type="button" class="btn btn-default" onclick="chia()">Chia</button>
+                </div>
+                <Label class="control-label col-sm-2" for="Ketqua">Ketqua</Label>
+                <div class="col-sm-5">
+                    <input type="text" name="" id="ketqua">
+                </div>
+            </div>
+
+        </form>
+    </div>
+</body>
+
+</html>

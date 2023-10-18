@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <form action="" class="form-horizontal col-sm-5">
+            <div class="form-group">
+                <label for="">Chon loai cafe:</label>
+                <br>
+                <input type="checkbox" name="loai" id="" value="Trung Nguyen"> Trung Nguyen
+                <br>
+                <input type="checkbox" name="loai" id="" value="Me Kong"> Me Kong
+                <br>
+                <input type="checkbox" name="loai" id="" value="New Life"> New Life
+                <br>
+                <input type="checkbox" name="loai" id="" value="Ocean Blue"> Ocean Blue
+                <br>
+                <input type="checkbox" name="loai" id="" value="Blue Space"> Blue Space
+                <br>
+                <input type="checkbox" name="loai" id="" value="Windows"> Windows
+                <br>
+                <button type="button" id="Chọn" onclick="chon()">Chọn</button>
+            </div>
+        </form>
+    </div>
+    <script lang="text/Javescript">
+        function chon(){
+            var loai = document.getElementsByName('loai');
+            var loais = '';
+            for(var i = 0; i<loai.length; i++){
+                if(loai[i].checked == true){
+                    loais += loai[i].value + ", ";
+                }
+            }
+
+            document.write('Bạn chọn cafe: ' + loais );
+        }
+    </script>
+</body>
+</html>
