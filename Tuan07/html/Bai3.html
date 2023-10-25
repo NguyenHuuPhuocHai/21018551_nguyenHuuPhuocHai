@@ -1,0 +1,204 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0px auto;
+        }
+        .container{
+            border: 1px solid;
+            background-color: aquamarine;
+        }
+        form{
+            width: 800px;
+        }
+        table, tr, td{
+            border: 2px solid black;
+        }
+    </style>
+    <script lang="text/Javascript">
+        const btnRegister = document.getElementById('signup');
+
+        btnRegister.addEventListener('click', function () {
+            let isValid = checkValidate();
+
+            if (isValid) {
+                alert('Gửi đăng ký thành công');
+            }
+        });
+        const nameEle = document.getElementById('ten');
+        const usernameEle = document.getElementById('username');
+        const pwEle = document.getElementById('pw');
+        const pw2Ele = document.getElementById('pw2');
+        
+        function checkValidate() {
+            let nameValue = nameEle.value;
+            let usernameValue = usernameEle.value;
+            let pwValue = pwEle.value;
+            let pw2Value = pw2Ele.value;
+            let isCheck = true;
+
+            if (nameValue == '') {
+                setError(nameEle, 'Tên không được để trống');
+                isCheck = false;
+            } else {
+                setSuccess(nameEle);
+            }
+
+            if (usernameValue == '') {
+                setError(usernameEle, 'Tên đăng nhập không được để trống');
+                isCheck = false;
+            } else {
+                setSuccess(usernameEle);
+            }
+
+            if (pwValue == '') {
+                setError(pwEle, 'Mật khẩu không được để trống');
+                isCheck = false;
+            } else {
+                setSuccess(pwEle);
+            }
+
+            if (pw2Value == '') {
+                setError(pw2Ele, 'Mật khẩu không được để trống');
+                isCheck = false;
+            } else {
+                setSuccess(pw2Ele);
+            }
+            return isCheck;
+        }
+
+        function setError(ele, message) {
+            let parentEle = ele.parentNode;
+            parentEle.classList.add('error');
+            parentEle.querySelector('small').innerText = message;
+        }
+
+        function setSuccess(ele) {
+            ele.parentNode.classList.add('success');
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <p>Register Form</p>
+        </div>
+        <div class="row">
+            <form action="" class="form-group">
+                <table class="table table-bordered">
+                    <tr>
+                        <td class="text-right">Họ và tên (*) :</td>
+                        <td><input type="text" name="ten" id="ten" width="200px" class="form-control" autocomplete="off">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-right">Tên đăng nhập (*) :</td>
+                        <td><input type="text" name="username" id="username" width="200px" class="form-control" autocomplete="off">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-right">Mật khẩu (*) :</td>
+                        <td><input type="password" name="pw" id="pw" width="200px" class="form-control" autocomplete="off">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-right">Xác nhận mật khẩu (*) :</td>
+                        <td><input type="password" name="pw2" id="pw2" width="200px" class="form-control" autocomplete="off">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-right">Ngày sinh:</td>
+                        <td>
+                            <select name="ngay" id="ngay" class="form-select">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31"></option>
+                            </select>
+                            tháng: <select name="thang" id="thang" class="form-select">
+                                <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            </select>
+                            năm: <select name="nam" id="nam" class="form-select">
+                                <option value="1">1940</option>
+                                <option value="2">2001</option>
+                                <option value="3">2002</option>
+                                <option value="4">2003</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-right">Điện thoại:</td>
+                        <td><input type="tel" name="tele" id="tele" width="200px" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td class="text-right">Địa chỉ:</td>
+                        <td><input type="text" name="diachi" id="diachi" width="200px" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td class="text-right">Email khác:</td>
+                        <td><input type="email" name="email" id="email" width="200px" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td class="text-right">Sở thích:</td>
+                        <td><select name="loai" id="loai">
+                            <option value="1">ca nhạc</option>
+                            <option value="">thể thao</option>
+                            <option value="">nhảy múa</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><button type="button" id="signup" onclick="checkValidate()">Đăng ký</button>
+                        <button type="reset" id="huy">Hủy</button></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
